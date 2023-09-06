@@ -5,9 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 1000px;
+    overflow: auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+@font-face {
+  font-family: 'JejuGothic';
+  src:url('./fonts/webfonts_JejuGothic/JejuGothic.ttf.woff') format('woff'),
+      url('./fonts/webfonts_JejuGothic/JejuGothic.ttf.svg#JejuGothic') format('svg'),
+      url('./fonts/webfonts_JejuGothic/JejuGothic.ttf.eot'),
+      url('./fonts/webfonts_JejuGothic/JejuGothic.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
 }

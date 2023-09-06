@@ -1,0 +1,276 @@
+#grad1 {
+ margin: 0px;
+ height: 100vh;
+  background: linear-gradient(rgb(212,173,252),rgb(92, 70, 156), rgb(	24, 24, 24)); /* Standard syntax (must be last) */
+
+}
+.cover-toon{
+  margin: 20px;
+  display: flex;
+  height: auto;
+  user-select: none;
+
+  
+}
+.cover-toon-flex{
+  
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  
+  user-select: none;
+  flex-wrap: nowrap;
+}
+
+.coverIMG{  
+  max-width: 55%;
+  max-height: 40%;
+  border-radius: 20px;
+  cursor: pointer;
+
+  
+}
+.cover-toon-decribtion{
+  margin-left: 20px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+
+  background-color: rgba(24, 24, 24,0.9);
+  color: white;
+
+}
+.textHead-decribtion{
+  padding: 4px;
+  margin-left: 6px;
+  font-size: clamp(32px,2.5vw,64px);
+}
+
+.name-creator-text{
+  margin-left: 10px;
+  padding-bottom: 4px;
+  display: flex;
+  font-size: clamp(20px,2.5vw,32px);
+  flex-direction: row;
+  
+}
+.by-text{
+  color: #D4ADFC;
+}
+.creatorname{
+  margin-left: 6px;
+}
+.shortstory{
+  margin: 6px;
+  font-size: clamp(15px,2.5vw,20px);
+}
+.footer-decribtion{
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  padding: 8px;
+  align-items: center;
+  
+}
+.heart-icon{
+  max-width: 32px;
+  height: auto;
+
+  
+  
+}
+.heart-icon-count{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.count-heart{
+  padding-left: 10px;
+  font-size: clamp(15px,2.5vw,30px);
+
+}
+
+.box3 {
+  height: 85px;
+  width: 588px;
+  position: relative;
+  margin: 20px;
+}
+
+.box3 .group {
+  height: 85px;
+  left: 0;
+  position: absolute;
+  
+  top: 0;
+  width: 590px;
+}
+
+.box3 .overlap {
+  background: linear-gradient(#5C469C ,#181818); /* Standard syntax (must be last) */
+  background-size: 100% 100%;
+  height: 93px;
+  border-radius: 50px;
+  left: -4px;
+  position: relative;
+  width: 596px;
+}
+
+.box3 .overlap-group {
+  height: 57px;
+  left: 35px;
+  position: absolute;
+  top: 14px;
+  width: 465px;
+}
+
+.box3 .text-wrapper {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 44px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 5.5px;
+  line-height: normal;
+  position: absolute;
+  top: 1px;
+  white-space: nowrap;
+  width: 384px;
+}
+
+.box3 .my-coin {
+  height: 57px;
+  left: 333px;
+  position: absolute;
+  top: 0;
+  width: 132px;
+}
+
+.box3 .div-wrapper {
+  background-color: #f4f4f4;
+  border-radius: 34px;
+ 
+  height: 57px;
+  position: relative;
+  width: 130px;
+}
+
+.box3 .div {
+  color: var(--x1-drk-blue);
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 44px;
+  font-weight: 400;
+  height: 32px;
+  left: 8px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 12px;
+  white-space: nowrap;
+  width: 114px;
+}
+
+.box3 .image {
+  height: 77px;
+  left: 509px;
+  object-fit: cover;
+  position: absolute;
+  top: 4px;
+  width: 75px;
+}
+
+.box4 {
+  display: flex;
+  position: relative;
+  border-radius: 20px;
+  align-items: center;
+  height: 50%;
+  width: 97%;
+  margin: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #000000;
+  flex-direction: row;
+}
+
+.box4-flex {
+  height: 256px;
+  width: 207px;
+  margin-left: 40px;
+  position: relative;
+  
+}
+
+.box4-flex .group {
+  height: 256px;
+  position: absolute;
+  width: 209px;
+}
+
+.box4-flex .overlap-group {
+  background-color: #5c469c;
+  border: 6px solid;
+  border-color: #f4f4f4;
+  border-radius: 17px;
+  height: 268px;
+  left: -6px;
+  position: relative;
+  top: -6px;
+  width: 219px;
+}
+
+.box4-flex .rectangle {
+  background-color: #f4f4f4;
+  border: 0px solid;
+  border-radius: 0px 0px 17px 17px;
+  height: 116px;
+  left: -2px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  top: 142px;
+  width: 211px;
+}
+.box4-text{
+  font-size: 30px;
+}
+
+.box4-flex .overlap {
+  height: 90px;
+  left: 11px;
+  position: absolute;
+  top: 36px;
+  width: 185px;
+}
+
+.box4-flex .text-wrapper {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 48px;
+  font-weight: 400;
+  height: 90px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 117px;
+}
+
+.box4-flex .image {
+  height: 70px;
+  left: 116px;
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  width: 69px;
+}
+

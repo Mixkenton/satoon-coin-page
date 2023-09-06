@@ -1,0 +1,284 @@
+
+@font-face {
+  font-family: 'JejuGothic';
+  src:url('../fonts/webfonts_JejuGothic/JejuGothic.ttf.woff') format('woff'),
+      url('../fonts/webfonts_JejuGothic/JejuGothic.ttf.svg#JejuGothic') format('svg'),
+      url('../fonts/webfonts_JejuGothic/JejuGothic.ttf.eot'),
+      url('../fonts/webfonts_JejuGothic/JejuGothic.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+.link{
+  display: flex;
+  position: initial;
+  
+}
+.header-left-side{
+  display: flex;
+  flex-wrap: nowrap;
+  font-family: 'JejuGothic';
+  align-items: center;
+}
+.satoon{
+  margin-right:40px;
+  display: flex;
+  
+  
+  
+}
+.satoon-img{
+  height: 70px;
+  align-items: center;
+  cursor: pointer;
+  
+}
+.text-on-top{
+  
+  font-size: 20px;
+  margin-right:40px ;
+  cursor: pointer;
+  user-select: none;
+}
+.text-on-top:hover{
+  font-size: 20px;
+  margin-right:40px ;
+  cursor: pointer;
+  user-select: none;
+  background-color: #D4ADFC;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+}
+.popular{
+  margin-right:20px ;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.header-right-side{
+  display: flex;
+  align-items: center;
+  padding-right: 2px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.button-on-top{
+  margin: 10px;
+  font-family: 'JejuGothic';
+  display: flex;
+  flex-direction: row;
+  
+}
+.search-input-on-top{
+
+ margin: 10px;
+ display: inline-block;
+ position: relative;
+
+  
+  
+}
+
+
+/*Search bar*/
+form{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-5%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+  position:relative;
+  
+}
+
+input{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.fa{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #0C134F;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+  align-items: center;
+
+  display: inline-block;
+  
+
+  
+}
+
+form:hover,
+form:valid{
+  width: 200px;
+  cursor: pointer;
+}
+
+form:hover input,
+form:valid input{
+  display: block;
+}
+
+form:hover .fa,
+form:valid .fa{
+  background: #5C469C;
+  color: white;
+}
+
+
+a {
+display: none;
+position: absolute;
+top: 70px;
+bottom:0;
+left: 0;
+right: 0;
+font-size: 20px;
+color: white;
+text-align: center; 
+width: 100%;
+}
+
+form:valid a {
+display: block;
+}
+.search-input{
+  display: flex;
+  align-items: center;
+}
+.search-icon{
+  margin-bottom: 50px;
+  margin-left: -3.4px;
+  margin-top: -3px;
+  height: 30px;
+}
+
+.box {
+  height: 38px;
+  width: 120px;
+  display: flex;
+  position: relative;
+  
+  }
+  .box .my-coin {
+  height: 38px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 122px;
+  }
+  .box .overlap-group {
+  background-color: #f4f4f4;
+  border-radius: 34px;
+  box-shadow: inset 0px 4px 6px #00000040;
+  height: 38px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 120px;
+  }
+  .box .element {
+  color: transparent;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  height: 21px;
+  left: 7px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  text-shadow: 0px 4px 4px #00000040;
+  top: -5px;
+  white-space: nowrap;
+  width: 105px;
+  }
+  .box .text-wrapper {
+  color: #181818;
+  }
+  .box .span {
+  color: #ffcd1e;
+  }
+
+  .image {
+    height: 60px;
+    width: 54px;
+    position: relative;
+    }
+    .image .profile {
+    height: 60px;
+    position: absolute;
+    left: 0;
+    mix-blend-mode: lighten;
+    object-fit: cover;
+    top: 0;
+    width: 54px;
+    }
+
+  .box2 {
+    height: 30px;
+    position: relative;
+    width: 37px;
+    margin-top: 5px;
+    margin-left: 10px;
+    }
+    .box2 .burger {
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 37px;
+    }
+    .box2 .rectangle {
+    background-color: #d9d9d9;
+    border-radius: 4px;
+    height: 6px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 37px;
+    }
+    .box2 .div {
+    background-color: #d9d9d9;
+    border-radius: 4px;
+    height: 6px;
+    left: 0;
+    position: absolute;
+    top: 12px;
+    width: 37px;
+    }
+    .box2 .rectangle-2 {
+    background-color: #d9d9d9;
+    border-radius: 4px;
+    height: 6px;
+    left: 0;
+    position: absolute;
+    top: 24px;
+    width: 37px;
+    }
