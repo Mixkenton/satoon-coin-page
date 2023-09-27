@@ -1,6 +1,10 @@
 #grad1 {
- margin: 0px;
- height: 100vh;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
   background: linear-gradient(rgb(212,173,252),rgb(92, 70, 156), rgb(	24, 24, 24)); /* Standard syntax (must be last) */
 
 }
@@ -117,6 +121,7 @@
   left: -4px;
   position: relative;
   width: 596px;
+  user-select: none;
 }
 
 .box3 .overlap-group {
@@ -186,22 +191,29 @@
 
 .box4 {
   display: flex;
+  align-items: center;
   position: relative;
   border-radius: 20px;
-  align-items: center;
   height: 50%;
-  width: 97%;
-  margin: 20px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  width: 83%;
+  margin-left: 20px;
   background-color: #000000;
-  flex-direction: row;
+  overflow: auto;
+  user-select: none;
+ 
+}
+.box4-content{
+  display: flex;
+  position: absolute;
+  align-content: center;
+  flex-wrap: nowrap;
+  padding: 40px; 
+  gap: 50px;
 }
 
 .box4-flex {
   height: 256px;
   width: 207px;
-  margin-left: 40px;
   position: relative;
   
 }
@@ -222,6 +234,7 @@
   position: relative;
   top: -6px;
   width: 219px;
+  cursor: pointer;
 }
 
 .box4-flex .rectangle {
@@ -238,6 +251,10 @@
   top: 142px;
   width: 211px;
 }
+.box4-flex :hover{
+  opacity: 95%;
+}
+
 .box4-text{
   font-size: 30px;
 }
@@ -261,7 +278,7 @@
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 0;
+  top: 15px;
   width: 117px;
 }
 
@@ -274,3 +291,19 @@
   width: 69px;
 }
 
+.satoon-footer{
+  display: flex;
+  user-select: none;
+  
+  
+}
+.satoon-footer .satoon-img2{
+  position: relative;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20%;
+  width: 20%;
+}

@@ -5,9 +5,12 @@ import './styles/content.css';
 import './styles/header';
 
 
-
 import { Layout, theme, ConfigProvider, Button } from 'antd';
 import type { SizeType } from 'antd/es/config-provider/SizeContext';
+
+/* Confirmation  */
+import Swal from 'sweetalert2';
+/*End Confirmation */
 
 import {
   BrowserRouter as Router,
@@ -18,6 +21,45 @@ import {
 } from "react-router-dom";
 
 const { Header } = Layout;
+
+interface Product {
+  id: number;
+  price: string;
+  coin: string;
+}
+const data: Product[] = [
+  {
+    id: 1,
+    price: "THB 40",
+    coin: "185"
+  },
+  {
+    id: 2,
+    price: "THB 100",
+    coin: "470"
+  },
+  {
+    id: 3,
+    price: "THB 200",
+    coin: "960"
+  },
+  {
+    id: 4,
+    price: "THB 350",
+    coin: "1750"
+  },
+  {
+    id: 5,
+    price: "THB 1000",
+    coin: "5100"
+  },
+  {
+    id: 6,
+    price: "THB 1200",
+    coin: "6300"
+  },
+
+]
 
 
 const headerStyle: React.CSSProperties = {
@@ -33,20 +75,41 @@ const headerStyle: React.CSSProperties = {
 
 
 function App() {
-
+  const [products, setProducts] = useState<Product[]>(data);
 
   useEffect(() => {
     const script = document.createElement('script');
     script.src = './styles/header';
     script.async = true;
   }
-
   )
   const {
     token: { colorBgContainer },
   } = theme.useToken();
   const [size, setSize] = useState<SizeType>('large');
+  const handleClick = (p:Product) => {
+    Swal.fire({
+      title: 'คุณต้องการชำระเงิน?',
+      text: `คุณต้องการจ่ายชำระจำนวน ${p.price}`,
+      icon: 'info',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Confirm'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'ชำระสำเร็จ!',
+          `คุณได้รับ coin จำนวน ${p.coin}`,
+          'success'
+        )
+      }
+    })
+  }
+
+
   return (
+
     <Router>
       <ConfigProvider
         theme={{
@@ -62,7 +125,9 @@ function App() {
 
           },
         }}>
+
         <Layout className="layout">
+
           <Header style={headerStyle}>
 
             <div className='header-left-side'>
@@ -112,14 +177,9 @@ function App() {
                     <div className="rectangle-2" />
                   </div>
                 </div>
-
               </div>
-
-
-
             </div>
           </Header>
-
           <div id="grad1">
             <div className="box3">
               <div className="group">
@@ -132,123 +192,37 @@ function App() {
                       </div>
                     </div>
                   </div>
-
                   <img className="image" alt="Image" src={require("./pictures/image-4.png")} />
                 </div>
               </div>
             </div>
-
             <div className="box4">
-            <div className='box4-flex'>
-              <div className="box">
-                  <div className="group">
-                    <div className="overlap-group">
-                      <div className="rectangle"><div className='box4-text'>THB 40</div></div>
-                      <div className="overlap">
-                        <div className="text-wrapper">185</div>
-                        <img className="image" alt="Image" src={require("./pictures/image-4.png")}/>
+              <div className='box4-content'>
+                {products.map((p) => (
+                  <div onClick={() => handleClick(p)} className='box4-flex' >
+                    <div className="box">
+                      <div className="group">
+                        <div className="overlap-group">
+                          <div className="rectangle"><div className='box4-text'>{p.price}</div></div>
+                          <div className="overlap">
+                            <div className="text-wrapper">{p.coin}</div>
+                            <img className="image" alt="Image" src={require("./pictures/image-4.png")} />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-            </div>
-            <div className='box4-flex'>
-              <div className="box">
-                  <div className="group">
-                    <div className="overlap-group">
-                      <div className="rectangle"><div className='box4-text'>THB 100</div></div>
-                      <div className="overlap">
-                        <div className="text-wrapper">185</div>
-                        <img className="image" alt="Image" src={require("./pictures/image-4.png")}/>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div className='box4-flex'>
-              <div className="box">
-                  <div className="group">
-                    <div className="overlap-group">
-                      <div className="rectangle"><div className='box4-text'>THB 200</div></div>
-                      <div className="overlap">
-                        <div className="text-wrapper">185</div>
-                        <img className="image" alt="Image" src={require("./pictures/image-4.png")}/>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div className='box4-flex'>
-              <div className="box">
-                  <div className="group">
-                    <div className="overlap-group">
-                      <div className="rectangle"><div className='box4-text'>THB 350</div></div>
-                      <div className="overlap">
-                        <div className="text-wrapper">185</div>
-                        <img className="image" alt="Image" src={require("./pictures/image-4.png")}/>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div className='box4-flex'>
-              <div className="box">
-                  <div className="group">
-                    <div className="overlap-group">
-                      <div className="rectangle" >
-                        <div className='box4-text'>THB 1000</div>
-                      </div>
-                      <div className="overlap">
-                        <div className="text-wrapper">185</div>
-                        <img className="image" alt="Image" src={require("./pictures/image-4.png")}/>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-
-            </div>
-
-            {/* <div className='cover-toon'>
-              <div className='cover-toon-flex'>
-
-                <img className='coverIMG' src={require("./pictures/pxfuel.jpg")} />
-                <div className='cover-toon-decribtion'>
-                  <div className='textHead-decribtion'>toonname</div>
-                  <div className='name-creator-text'>
-                    <div className='by-text'>By</div>
-                    <div className='creatorname'>creatorname</div>
-                  </div>
-                  <div className='shortstory'>
-                    short story short story short story
-                    short story short story short story
-                    short story short story
-                  </div>
-                  <div className='footer-decribtion'>
-                    <div className='heart-icon-count'>
-                      <img className='heart-icon' src={require("./pictures/heart-icon.png")} />
-                      <div className='count-heart'>
-                        2.3 M
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
+                ))}
               </div>
-            </div> */}
+            </div>
+            <div className='satoon-footer'>
+              <img className='satoon-img2' src={require("./pictures/logo.png")} />
+            </div>
           </div>
-
-
-
-
-
         </Layout>
 
       </ConfigProvider>
-    </Router>
-
-
+    </Router >
   );
 }
 
