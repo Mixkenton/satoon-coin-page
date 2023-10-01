@@ -1,0 +1,111 @@
+
+#grad2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background: linear-gradient(rgb(212,173,252),rgb(92, 70, 156), rgb(	24, 24, 24)); /* Standard syntax (must be last) */
+  font-family: 'JejuGothic';
+}
+
+@font-face {
+  font-family: 'JejuGothic';
+  src:url('../fonts/webfonts_JejuGothic/JejuGothic.ttf.woff') format('woff'),
+      url('../fonts/webfonts_JejuGothic/JejuGothic.ttf.svg#JejuGothic') format('svg'),
+      url('../fonts/webfonts_JejuGothic/JejuGothic.ttf.eot'),
+      url('../fonts/webfonts_JejuGothic/JejuGothic.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+.page{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.box-login{
+  background-color: #181818e6;
+  border-radius: 30px;
+  box-shadow: 0px 4px 28px #00000033;
+  height: 78vh;
+  width: 58vh;
+  user-select: none;
+  margin-top: 6%;
+}
+.group{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+  flex-direction: column;
+  
+}
+.satoon-img-login{
+  position: relative;
+
+  width: 50%;
+  padding-left: 140px;
+  top: -100px;
+  user-select: none;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  
+}
+.text-login{
+
+  color: white;
+  font-size: 50px;
+  margin-left: 39%;
+}
+.group input {
+  display:block;
+  width:80%;
+  margin-left:60px;
+  margin-top: 30px;
+  padding:10px;
+  transition: width 0.4s ease-in-out;
+}
+
+.type-1-login{
+  box-sizing: border-box;
+  border-radius:10px;
+  border: 1px solid #eee;
+  transition: .3s border-color;
+}
+
+.type-1-login:hover{
+  border: 1px solid #aaa;
+}
+.button-login{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 5%;
+
+}
+.button-signup{
+  width: 120px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+span {
+  content: "\2192";
+  color: white;
+  justify-items: center;
+}
+.enter-login{
+  border-radius: 20px;
+  font-size: 50px;
+  text-align: center;
+  width: 120px;
+  height: 60px;
+  background-color: #5ECC8A;
+  cursor: pointer;
+}
+.enter-login:hover{
+  opacity: 0.8;
+}
